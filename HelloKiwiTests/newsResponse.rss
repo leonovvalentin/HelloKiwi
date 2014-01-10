@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Яндекс.Новости: Hardware</title>
+    <link>http://news.yandex.ru/hardware.html</link>
+    <description>
+      Первая в России служба автоматической обработки и систематизации новостей. Сообщения ведущих российских и мировых СМИ. Обновление в режиме реального времени 24 часа в сутки.
+    </description>
+    <image>
+      <url>http://company.yandex.ru/i/50x23.gif</url>
+      <link>http://news.yandex.ru/hardware.html</link>
+      <title>Яндекс.Новости: Hardware</title>
+    </image>
+    <lastBuildDate>10 Jan 2014 13:53:52 +0400</lastBuildDate>
+    <item>
+      <title>В 2013 году мировой рынок ПК пережил рекордное падение</title>
+      <link>http://news.yandex.ru/yandsearch?cl4url=ibusiness.ru%2Fnews%2F29707</link>
+      <description>В 2013 году объемы поставок персональных компьютеров сократились на 10% - до 316 млн единиц, что стало самым крупным падением за всю историю существования рынка ПК, сообщает РИА Новости со ссылкой на исследование аналитической компании Gartner.</description>
+      <pubDate>10 Jan 2014 13:41:18 +0400</pubDate>
+      <guid>http://news.yandex.ru/yandsearch?cl4url=ibusiness.ru%2Fnews%2F29707</guid>
+    </item>
+    <item>
+      <title>Новый Galaxy S5 может быть с сенсором распознавания глаз пользователя</title>
+      <link>http://news.yandex.ru/yandsearch?cl4url=www.aif.ru%2Ftechno%2Fmobile%2F1079951</link>
+      <description>Новый смартфон Galaxy S5 компания Samsung Electronics планирует выпустить в апреле, сообщает Bloomberg со ссылкой на исполнительного вице-президента мобильного подразделения Samsung Ли Ян Хи.</description>
+      <pubDate>10 Jan 2014 12:51:35 +0400</pubDate>
+      <guid>http://news.yandex.ru/yandsearch?cl4url=www.aif.ru%2Ftechno%2Fmobile%2F1079951</guid>
+    </item>
+    <item>
+      <title>CES 2014: Intel представила платформу Dual OS на Windows и Android</title>
+      <link>http://news.yandex.ru/yandsearch?cl4url=ilenta.com%2Fnews%2Fmisc%2Fmisc_1794.html</link>
+      <description>Intel продемонстрировала технологию на ноутбуке во время пресс-конференции компании, сразу после презентации &amp;quot;Intel Device Protection Technology&amp;quot;, которая должна помочь Android устройствам на базе Intel соответствовать корпоративным стандартам для безопасности предприятия.</description>
+      <pubDate>10 Jan 2014 02:02:11 +0400</pubDate>
+      <guid>http://news.yandex.ru/yandsearch?cl4url=ilenta.com%2Fnews%2Fmisc%2Fmisc_1794.html</guid>
+    </item>
+  </channel>
+</rss>

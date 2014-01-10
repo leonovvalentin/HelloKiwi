@@ -6,29 +6,54 @@
 //  Copyright (c) 2014 noveo. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 
-@interface HelloKiwiTests : XCTestCase
 
-@end
+#import "NewsVC.h"
+#import <Kiwi/Kiwi.h>
 
-@implementation HelloKiwiTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
+SPEC_BEGIN(NewsVCSpec)
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
+describe(@"NewsVC", ^{
+    
+    __block NewsVC *sut;
+    
+    beforeEach(^{
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil];
+        UINavigationController *NC = [sb instantiateInitialViewController];
+        sut = (NewsVC *)NC.topViewController;
+        sut.APIHelper = [[APIHelperNews alloc] init];
+        [sut view];
+    });
+    
+    afterEach(^{
+        sut = nil;
+    });
+    
+    it(@"should ask APIHelper about news after viewWillAppear:", ^{
+        [[sut.APIHelper should] receive:@selector(newsWithSuccess:failure:)];
+        [sut viewWillAppear:NO];
+    });
+    
+    context(@"tableView", ^{
+        
+        __block UITableView *tableView;
+        
+        beforeEach(^{
+            tableView = sut.tableView;
+        });
+        
+        it(@"should not be nil", ^{
+            [[sut.tableView shouldNot] beNil];
+        });
+        
+        it(@"should be top view", ^{
+            [[sut.view.subviews[0] should] equal:sut.tableView];
+        });
+        
+    });
+    
+});
 
-@end
+SPEC_END
