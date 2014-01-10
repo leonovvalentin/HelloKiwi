@@ -1,456 +1,1018 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
-		EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205F187FF84E00945233 /* CoreGraphics.framework */; };
-		EAA42062187FF84E00945233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42061187FF84E00945233 /* UIKit.framework */; };
-		EAA42068187FF84E00945233 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAA42066187FF84E00945233 /* InfoPlist.strings */; };
-		EAA4206A187FF84E00945233 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA42069187FF84E00945233 /* main.m */; };
-		EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4206D187FF84E00945233 /* AppDelegate.m */; };
-		EAA42070187FF84E00945233 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA4206F187FF84E00945233 /* Images.xcassets */; };
-		EAA42077187FF84E00945233 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42076187FF84E00945233 /* XCTest.framework */; };
-		EAA42078187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
-		EAA42079187FF84E00945233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42061187FF84E00945233 /* UIKit.framework */; };
-		EAA42081187FF84E00945233 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAA4207F187FF84E00945233 /* InfoPlist.strings */; };
-		EAA42083187FF84E00945233 /* HelloKiwiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA42082187FF84E00945233 /* HelloKiwiTests.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EAA4207A187FF84E00945233 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA42052187FF84E00945233 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAA42059187FF84E00945233;
-			remoteInfo = HelloKiwi;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		EAA4205A187FF84E00945233 /* HelloKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA4205D187FF84E00945233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EAA4205F187FF84E00945233 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EAA42061187FF84E00945233 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EAA42065187FF84E00945233 /* HelloKiwi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloKiwi-Info.plist"; sourceTree = "<group>"; };
-		EAA42067187FF84E00945233 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EAA42069187FF84E00945233 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EAA4206B187FF84E00945233 /* HelloKiwi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloKiwi-Prefix.pch"; sourceTree = "<group>"; };
-		EAA4206C187FF84E00945233 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EAA4206D187FF84E00945233 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EAA4206F187FF84E00945233 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EAA42075187FF84E00945233 /* HelloKiwiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloKiwiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA42076187FF84E00945233 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EAA4207E187FF84E00945233 /* HelloKiwiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloKiwiTests-Info.plist"; sourceTree = "<group>"; };
-		EAA42080187FF84E00945233 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EAA42082187FF84E00945233 /* HelloKiwiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloKiwiTests.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		EAA42057187FF84E00945233 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */,
-				EAA42062187FF84E00945233 /* UIKit.framework in Frameworks */,
-				EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAA42072187FF84E00945233 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA42077187FF84E00945233 /* XCTest.framework in Frameworks */,
-				EAA42079187FF84E00945233 /* UIKit.framework in Frameworks */,
-				EAA42078187FF84E00945233 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		EAA42051187FF84E00945233 = {
-			isa = PBXGroup;
-			children = (
-				EAA42063187FF84E00945233 /* HelloKiwi */,
-				EAA4207C187FF84E00945233 /* HelloKiwiTests */,
-				EAA4205C187FF84E00945233 /* Frameworks */,
-				EAA4205B187FF84E00945233 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		EAA4205B187FF84E00945233 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EAA4205A187FF84E00945233 /* HelloKiwi.app */,
-				EAA42075187FF84E00945233 /* HelloKiwiTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EAA4205C187FF84E00945233 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EAA4205D187FF84E00945233 /* Foundation.framework */,
-				EAA4205F187FF84E00945233 /* CoreGraphics.framework */,
-				EAA42061187FF84E00945233 /* UIKit.framework */,
-				EAA42076187FF84E00945233 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EAA42063187FF84E00945233 /* HelloKiwi */ = {
-			isa = PBXGroup;
-			children = (
-				EAA4206C187FF84E00945233 /* AppDelegate.h */,
-				EAA4206D187FF84E00945233 /* AppDelegate.m */,
-				EAA4206F187FF84E00945233 /* Images.xcassets */,
-				EAA42064187FF84E00945233 /* Supporting Files */,
-			);
-			path = HelloKiwi;
-			sourceTree = "<group>";
-		};
-		EAA42064187FF84E00945233 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EAA42065187FF84E00945233 /* HelloKiwi-Info.plist */,
-				EAA42066187FF84E00945233 /* InfoPlist.strings */,
-				EAA42069187FF84E00945233 /* main.m */,
-				EAA4206B187FF84E00945233 /* HelloKiwi-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EAA4207C187FF84E00945233 /* HelloKiwiTests */ = {
-			isa = PBXGroup;
-			children = (
-				EAA42082187FF84E00945233 /* HelloKiwiTests.m */,
-				EAA4207D187FF84E00945233 /* Supporting Files */,
-			);
-			path = HelloKiwiTests;
-			sourceTree = "<group>";
-		};
-		EAA4207D187FF84E00945233 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EAA4207E187FF84E00945233 /* HelloKiwiTests-Info.plist */,
-				EAA4207F187FF84E00945233 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		EAA42059187FF84E00945233 /* HelloKiwi */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAA42086187FF84E00945233 /* Build configuration list for PBXNativeTarget "HelloKiwi" */;
-			buildPhases = (
-				EAA42056187FF84E00945233 /* Sources */,
-				EAA42057187FF84E00945233 /* Frameworks */,
-				EAA42058187FF84E00945233 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HelloKiwi;
-			productName = HelloKiwi;
-			productReference = EAA4205A187FF84E00945233 /* HelloKiwi.app */;
-			productType = "com.apple.product-type.application";
-		};
-		EAA42074187FF84E00945233 /* HelloKiwiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAA42089187FF84E00945233 /* Build configuration list for PBXNativeTarget "HelloKiwiTests" */;
-			buildPhases = (
-				EAA42071187FF84E00945233 /* Sources */,
-				EAA42072187FF84E00945233 /* Frameworks */,
-				EAA42073187FF84E00945233 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EAA4207B187FF84E00945233 /* PBXTargetDependency */,
-			);
-			name = HelloKiwiTests;
-			productName = HelloKiwiTests;
-			productReference = EAA42075187FF84E00945233 /* HelloKiwiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		EAA42052187FF84E00945233 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = noveo;
-				TargetAttributes = {
-					EAA42074187FF84E00945233 = {
-						TestTargetID = EAA42059187FF84E00945233;
-					};
-				};
-			};
-			buildConfigurationList = EAA42055187FF84E00945233 /* Build configuration list for PBXProject "HelloKiwi" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = EAA42051187FF84E00945233;
-			productRefGroup = EAA4205B187FF84E00945233 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				EAA42059187FF84E00945233 /* HelloKiwi */,
-				EAA42074187FF84E00945233 /* HelloKiwiTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		EAA42058187FF84E00945233 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA42068187FF84E00945233 /* InfoPlist.strings in Resources */,
-				EAA42070187FF84E00945233 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAA42073187FF84E00945233 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA42081187FF84E00945233 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		EAA42056187FF84E00945233 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */,
-				EAA4206A187FF84E00945233 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAA42071187FF84E00945233 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAA42083187FF84E00945233 /* HelloKiwiTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EAA4207B187FF84E00945233 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EAA42059187FF84E00945233 /* HelloKiwi */;
-			targetProxy = EAA4207A187FF84E00945233 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EAA42066187FF84E00945233 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAA42067187FF84E00945233 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EAA4207F187FF84E00945233 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAA42080187FF84E00945233 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		EAA42084187FF84E00945233 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		EAA42085187FF84E00945233 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		EAA42087187FF84E00945233 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloKiwi/HelloKiwi-Prefix.pch";
-				INFOPLIST_FILE = "HelloKiwi/HelloKiwi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		EAA42088187FF84E00945233 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloKiwi/HelloKiwi-Prefix.pch";
-				INFOPLIST_FILE = "HelloKiwi/HelloKiwi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		EAA4208A187FF84E00945233 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloKiwi.app/HelloKiwi";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloKiwi/HelloKiwi-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HelloKiwiTests/HelloKiwiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		EAA4208B187FF84E00945233 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloKiwi.app/HelloKiwi";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloKiwi/HelloKiwi-Prefix.pch";
-				INFOPLIST_FILE = "HelloKiwiTests/HelloKiwiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		EAA42055187FF84E00945233 /* Build configuration list for PBXProject "HelloKiwi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAA42084187FF84E00945233 /* Debug */,
-				EAA42085187FF84E00945233 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAA42086187FF84E00945233 /* Build configuration list for PBXNativeTarget "HelloKiwi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAA42087187FF84E00945233 /* Debug */,
-				EAA42088187FF84E00945233 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		EAA42089187FF84E00945233 /* Build configuration list for PBXNativeTarget "HelloKiwiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAA4208A187FF84E00945233 /* Debug */,
-				EAA4208B187FF84E00945233 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = EAA42052187FF84E00945233 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0F7226B8F5FC43C784320F98</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF15D9CDAC0B4F4EAE9331D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17EBBDA7444D4341AD718895</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-HelloKiwiTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>644A131ED9F24D38B7EA0DF2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HelloKiwiTests.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-HelloKiwiTests.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF15D9CDAC0B4F4EAE9331D1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-HelloKiwiTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BC98C509B46F4632A2389DC0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42051187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA42063187FF84E00945233</string>
+				<string>EAA4207C187FF84E00945233</string>
+				<string>EAA4205C187FF84E00945233</string>
+				<string>EAA4205B187FF84E00945233</string>
+				<string>644A131ED9F24D38B7EA0DF2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42052187FF84E00945233</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>noveo</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>EAA42074187FF84E00945233</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>EAA42059187FF84E00945233</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>EAA42055187FF84E00945233</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>EAA42051187FF84E00945233</string>
+			<key>productRefGroup</key>
+			<string>EAA4205B187FF84E00945233</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>EAA42059187FF84E00945233</string>
+				<string>EAA42074187FF84E00945233</string>
+			</array>
+		</dict>
+		<key>EAA42055187FF84E00945233</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>EAA42084187FF84E00945233</string>
+				<string>EAA42085187FF84E00945233</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>EAA42056187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA4206E187FF84E00945233</string>
+				<string>EAA4206A187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42057187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA42060187FF84E00945233</string>
+				<string>EAA42062187FF84E00945233</string>
+				<string>EAA4205E187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42058187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA42068187FF84E00945233</string>
+				<string>EAA42070187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42059187FF84E00945233</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>EAA42086187FF84E00945233</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EAA42056187FF84E00945233</string>
+				<string>EAA42057187FF84E00945233</string>
+				<string>EAA42058187FF84E00945233</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HelloKiwi</string>
+			<key>productName</key>
+			<string>HelloKiwi</string>
+			<key>productReference</key>
+			<string>EAA4205A187FF84E00945233</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>EAA4205A187FF84E00945233</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HelloKiwi.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>EAA4205B187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA4205A187FF84E00945233</string>
+				<string>EAA42075187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4205C187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA4205D187FF84E00945233</string>
+				<string>EAA4205F187FF84E00945233</string>
+				<string>EAA42061187FF84E00945233</string>
+				<string>EAA42076187FF84E00945233</string>
+				<string>AF15D9CDAC0B4F4EAE9331D1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4205D187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>EAA4205E187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4205D187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA4205F187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>EAA42060187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4205F187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42061187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>EAA42062187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42061187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42063187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA4206C187FF84E00945233</string>
+				<string>EAA4206D187FF84E00945233</string>
+				<string>EAA4206F187FF84E00945233</string>
+				<string>EAA42064187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>HelloKiwi</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42064187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA42065187FF84E00945233</string>
+				<string>EAA42066187FF84E00945233</string>
+				<string>EAA42069187FF84E00945233</string>
+				<string>EAA4206B187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42065187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>HelloKiwi-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42066187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA42067187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42067187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42068187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42066187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42069187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4206A187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42069187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA4206B187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>HelloKiwi-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4206C187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4206D187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4206E187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4206D187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA4206F187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42070187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4206F187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42071187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA42083187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42072187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA42077187FF84E00945233</string>
+				<string>EAA42079187FF84E00945233</string>
+				<string>EAA42078187FF84E00945233</string>
+				<string>0F7226B8F5FC43C784320F98</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42073187FF84E00945233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EAA42081187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EAA42074187FF84E00945233</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>EAA42089187FF84E00945233</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BC98C509B46F4632A2389DC0</string>
+				<string>EAA42071187FF84E00945233</string>
+				<string>EAA42072187FF84E00945233</string>
+				<string>EAA42073187FF84E00945233</string>
+				<string>17EBBDA7444D4341AD718895</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>EAA4207B187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HelloKiwiTests</string>
+			<key>productName</key>
+			<string>HelloKiwiTests</string>
+			<key>productReference</key>
+			<string>EAA42075187FF84E00945233</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>EAA42075187FF84E00945233</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HelloKiwiTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>EAA42076187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>EAA42077187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42076187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42078187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4205D187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42079187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42061187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA4207A187FF84E00945233</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>EAA42052187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EAA42059187FF84E00945233</string>
+			<key>remoteInfo</key>
+			<string>HelloKiwi</string>
+		</dict>
+		<key>EAA4207B187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>EAA42059187FF84E00945233</string>
+			<key>targetProxy</key>
+			<string>EAA4207A187FF84E00945233</string>
+		</dict>
+		<key>EAA4207C187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA42082187FF84E00945233</string>
+				<string>EAA4207D187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>HelloKiwiTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4207D187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA4207E187FF84E00945233</string>
+				<string>EAA4207F187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4207E187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>HelloKiwiTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA4207F187FF84E00945233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAA42080187FF84E00945233</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42080187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42081187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA4207F187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42082187FF84E00945233</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>HelloKiwiTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAA42083187FF84E00945233</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA42082187FF84E00945233</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAA42084187FF84E00945233</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EAA42085187FF84E00945233</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>EAA42086187FF84E00945233</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>EAA42087187FF84E00945233</string>
+				<string>EAA42088187FF84E00945233</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>EAA42087187FF84E00945233</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>HelloKiwi/HelloKiwi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKiwi/HelloKiwi-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EAA42088187FF84E00945233</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>HelloKiwi/HelloKiwi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKiwi/HelloKiwi-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>EAA42089187FF84E00945233</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>EAA4208A187FF84E00945233</string>
+				<string>EAA4208B187FF84E00945233</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>EAA4208A187FF84E00945233</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>644A131ED9F24D38B7EA0DF2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/HelloKiwi.app/HelloKiwi</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>HelloKiwi/HelloKiwi-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKiwiTests/HelloKiwiTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EAA4208B187FF84E00945233</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>644A131ED9F24D38B7EA0DF2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/HelloKiwi.app/HelloKiwi</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>HelloKiwi/HelloKiwi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKiwiTests/HelloKiwiTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>EAA42052187FF84E00945233</string>
+</dict>
+</plist>
