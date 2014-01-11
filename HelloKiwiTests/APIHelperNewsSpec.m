@@ -66,7 +66,7 @@ describe(@"APIHelperNews", ^{
              }
              failure:nil];
             
-            [[expectFutureValue(theValue(success)) shouldEventuallyBeforeTimingOutAfter(1.0)] beYes];
+            [[expectFutureValue(theValue(success)) shouldEventually] beYes];
         });
         
     });

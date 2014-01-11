@@ -10,7 +10,6 @@
 		0F7226B8F5FC43C784320F98 /* libPods-HelloKiwiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF15D9CDAC0B4F4EAE9331D1 /* libPods-HelloKiwiTests.a */; };
 		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
 		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
-		58C4BC7218816CB700357E76 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
 		C92CBC43C6514462979607BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8080074748094593914C6262 /* libPods.a */; };
 		EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
 		EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205F187FF84E00945233 /* CoreGraphics.framework */; };
@@ -260,7 +259,6 @@
 			files = (
 				EAA42068187FF84E00945233 /* InfoPlist.strings in Resources */,
 				EAA42070187FF84E00945233 /* Images.xcassets in Resources */,
-				58C4BC7218816CB700357E76 /* newsResponse.rss in Resources */,
 				EAA42090187FFD7E00945233 /* HelloKiwi.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
