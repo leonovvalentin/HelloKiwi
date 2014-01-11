@@ -9,6 +9,7 @@
 
 
 #import "APIHelperNews.h"
+#import <AFNetworking/AFNetworking.h>
 
 
 
@@ -16,7 +17,20 @@
 
 - (void)newsWithSuccess:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure
 {
+    AFHTTPRequestOperation *operation =
+    [[AFHTTPRequestOperation alloc] initWithRequest:
+     [NSURLRequest requestWithURL:
+      [NSURL URLWithString:@"http://news.yandex.ru/index.rss"]]];
     
+    [operation
+     setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+         if (success) success(nil);
+     }
+     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (failure) failure(error);
+     }];
+    
+    [operation start];
 }
 
 @end
