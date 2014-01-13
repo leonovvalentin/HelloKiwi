@@ -8,6 +8,10 @@
 
 
 
+#import "News.h"
+
+
+
 @interface APIHelperNews : NSObject
 
 - (void)newsWithSuccess:(void (^)(NSArray *news))success failure:(void (^)(NSError *error))failure;

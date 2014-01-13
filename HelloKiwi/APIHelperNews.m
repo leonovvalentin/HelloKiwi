@@ -9,7 +9,10 @@
 
 
 #import "APIHelperNews.h"
+
 #import <AFNetworking/AFNetworking.h>
+#import <RaptureXML/RXMLElement.h>
+#import <OHHTTPStubs/OHHTTPStubs.h>
 
 
 
@@ -24,7 +27,21 @@
     
     [operation
      setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-         if (success) success(nil);
+         NSMutableArray *news = [NSMutableArray array];
+         RXMLElement *channelXML = [[RXMLElement elementFromXMLData:responseObject]
+                                    child:@"channel"];
+         NSArray *elements = [channelXML children:@"item"];
+         for (RXMLElement *element in elements) {
+             News *newsItem = [[News alloc] init];
+             newsItem.title = [element child:@"title"].text;
+             newsItem.link = [element child:@"link"].text;
+             newsItem.descriptionOfNews = [element child:@"description"].text;
+             newsItem.pubDate = [NSDate dateFromString:[element child:@"pubDate"].text];
+             newsItem.guid = [element child:@"guid"].text;
+             [news addObject:newsItem];
+         }
+         
+         if (success) success(news.copy);
      }
      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (failure) failure(error);

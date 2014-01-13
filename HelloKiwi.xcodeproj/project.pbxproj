@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F7226B8F5FC43C784320F98 /* libPods-HelloKiwiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF15D9CDAC0B4F4EAE9331D1 /* libPods-HelloKiwiTests.a */; };
+		58293BC81881ADAA00A2AE10 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
+		5831D71718819CE000884D55 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D71618819CE000884D55 /* News.m */; };
+		5831D71A1881A60200884D55 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D7191881A60200884D55 /* utils.m */; };
 		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
 		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
 		C92CBC43C6514462979607BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8080074748094593914C6262 /* libPods.a */; };
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5831D71518819CE000884D55 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		5831D71618819CE000884D55 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		5831D7181881A60200884D55 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		5831D7191881A60200884D55 /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelperNewsSpec.m; sourceTree = "<group>"; };
 		58C4BC701881687100357E76 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
 		644A131ED9F24D38B7EA0DF2 /* Pods-HelloKiwiTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloKiwiTests.xcconfig"; path = "Pods/Pods-HelloKiwiTests.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +146,10 @@
 				EAA4208D187FFBF800945233 /* NewsVC.m */,
 				EAA420931880027100945233 /* APIHelperNews.h */,
 				EAA420941880027100945233 /* APIHelperNews.m */,
+				5831D71518819CE000884D55 /* News.h */,
+				5831D71618819CE000884D55 /* News.m */,
+				5831D7181881A60200884D55 /* utils.h */,
+				5831D7191881A60200884D55 /* utils.m */,
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
 				EAA42064187FF84E00945233 /* Supporting Files */,
@@ -259,6 +270,7 @@
 			files = (
 				EAA42068187FF84E00945233 /* InfoPlist.strings in Resources */,
 				EAA42070187FF84E00945233 /* Images.xcassets in Resources */,
+				58293BC81881ADAA00A2AE10 /* newsResponse.rss in Resources */,
 				EAA42090187FFD7E00945233 /* HelloKiwi.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,8 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5831D71718819CE000884D55 /* News.m in Sources */,
 				EAA420951880027100945233 /* APIHelperNews.m in Sources */,
 				EAA4208E187FFBF800945233 /* NewsVC.m in Sources */,
+				5831D71A1881A60200884D55 /* utils.m in Sources */,
 				EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */,
 				EAA4206A187FF84E00945233 /* main.m in Sources */,
 			);
