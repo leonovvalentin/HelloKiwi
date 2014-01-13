@@ -30,6 +30,12 @@
      failure:nil];
 }
 
+- (void)setNews:(NSArray *)news
+{
+    _news = news;
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

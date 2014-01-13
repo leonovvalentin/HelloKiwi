@@ -82,6 +82,11 @@ describe(@"NewsVC", ^{
                 [[sut.view.subviews[0] should] equal:tableView];
             });
             
+            it(@"should reload data after setNews:", ^{
+                [[sut.tableView should] receive:@selector(reloadData)];
+                [sut setNews:nil];
+            });
+            
             context(@"with news", ^{
                 
                 __block News *newsItem;
