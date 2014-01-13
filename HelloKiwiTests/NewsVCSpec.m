@@ -9,7 +9,6 @@
 
 
 #import "NewsVC.h"
-#import "OHHTTPStubs+Tests.h"
 #import <Kiwi/Kiwi.h>
 
 
@@ -41,6 +40,11 @@ describe(@"NewsVC", ^{
         
         beforeEach(^{
             [sut viewWillAppear:NO];
+        });
+        
+        it(@"should set right news", ^{
+            NSArray *news = @[[[News alloc] init], [[News alloc] init]];
+            [sut.APIHelper stubAndReturn:news] ;
         });
     });
     

@@ -16,4 +16,6 @@
 
 - (void)newsWithSuccess:(void (^)(NSArray *news))success failure:(void (^)(NSError *error))failure;
 
++ (NSArray *)newsFromSuccessResponse:(NSData *) responseObject;
+
 @end
