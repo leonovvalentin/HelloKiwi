@@ -31,6 +31,8 @@
 		EAA42092188000C700945233 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
 		EAA420951880027100945233 /* APIHelperNews.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA420941880027100945233 /* APIHelperNews.m */; };
 		EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */; };
+		EAB77E461883EF8E00EDCC3E /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB77E451883EF8E00EDCC3E /* NewsCell.m */; };
+		EADFC2A018840D020012CCB9 /* NewsCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EADFC29F18840D020012CCB9 /* NewsCellSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,9 @@
 		EAA420941880027100945233 /* APIHelperNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelperNews.m; sourceTree = "<group>"; };
 		EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs+Tests.h"; sourceTree = "<group>"; };
 		EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+Tests.m"; sourceTree = "<group>"; };
+		EAB77E441883EF8E00EDCC3E /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		EAB77E451883EF8E00EDCC3E /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		EADFC29F18840D020012CCB9 /* NewsCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,8 @@
 				5831D71618819CE000884D55 /* News.m */,
 				5831D7181881A60200884D55 /* utils.h */,
 				5831D7191881A60200884D55 /* utils.m */,
+				EAB77E441883EF8E00EDCC3E /* NewsCell.h */,
+				EAB77E451883EF8E00EDCC3E /* NewsCell.m */,
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
 				EAA42064187FF84E00945233 /* Supporting Files */,
@@ -175,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA42082187FF84E00945233 /* NewsVCSpec.m */,
+				EADFC29F18840D020012CCB9 /* NewsCellSpec.m */,
 				58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */,
 				58C4BC701881687100357E76 /* AppDelegateSpec.m */,
 				EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */,
@@ -362,6 +370,7 @@
 				5831D71718819CE000884D55 /* News.m in Sources */,
 				EAA420951880027100945233 /* APIHelperNews.m in Sources */,
 				EAA4208E187FFBF800945233 /* NewsVC.m in Sources */,
+				EAB77E461883EF8E00EDCC3E /* NewsCell.m in Sources */,
 				5831D71A1881A60200884D55 /* utils.m in Sources */,
 				EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */,
 				EAA4206A187FF84E00945233 /* main.m in Sources */,
@@ -376,6 +385,7 @@
 				58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */,
 				58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */,
 				EAA42083187FF84E00945233 /* NewsVCSpec.m in Sources */,
+				EADFC2A018840D020012CCB9 /* NewsCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

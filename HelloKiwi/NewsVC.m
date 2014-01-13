@@ -9,6 +9,7 @@
 
 
 #import "NewsVC.h"
+#import "NewsCell.h"
 
 
 
@@ -39,7 +40,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[UITableViewCell alloc] init];
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    [cell setupWithNews:self.news[indexPath.row]];
+    return cell;
 }
 
 @end
