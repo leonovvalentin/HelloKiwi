@@ -10,6 +10,8 @@
 
 #import "APIHelperNews.h"
 
+#import "OHHTTPStubs+Tests.h"
+
 #import <Kiwi/Kiwi.h>
 #import <OHHTTPStubs/OHHTTPStubs.h>
 
@@ -32,27 +34,7 @@ describe(@"APIHelperNews", ^{
     context(@"when success server request", ^{
         
         beforeAll(^{
-            [OHHTTPStubs
-             stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                 return
-                 [request.URL.absoluteString isEqualToString:@"http://news.yandex.ru/index.rss"] ?
-                 YES : NO;
-             }
-             withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-                 return
-                 [[OHHTTPStubsResponse
-                   responseWithFileAtPath:OHPathForFileInBundle(@"newsResponse.rss", nil)
-                   statusCode:200
-                   headers:@{
-                             @"Cache-Control" : @"private, no-cache, no-store",
-                             @"Content-Encoding" : @"gzip",
-                             @"Content-Type" : @"application/rss+xml; charset=utf-8",
-                             @"Date" : @"Sat, 11 Jan 2014 12:15:03 GMT",
-                             @"Transfer-Encoding" : @"Identity",
-                             @"Vary" : @"Accept-Encoding",
-                             @"X-Server" : @"nginx-export"
-                             }] requestTime:0.0 responseTime:0.0];
-             }];
+            [OHHTTPStubs setupSuccessResponseForAPIHelperNews];
         });
         
         afterAll(^{
@@ -106,7 +88,7 @@ describe(@"APIHelperNews", ^{
             [[expectFutureValue(theValue(isNewsItems)) shouldEventually] beYes];
         });
         
-        it(@"should return right News items", ^{
+        it(@"should return right News items in success block", ^{
             
             __block BOOL rightNews = NO;
             
@@ -114,7 +96,6 @@ describe(@"APIHelperNews", ^{
              newsWithSuccess:^(NSArray *news) {
                  for (NSUInteger i = 0; i < news.count; i++) {
                      News *newsItem = news[i];
-                     
                      switch (i) {
                          case 0: {
                              BOOL rightTitle =
@@ -158,18 +139,10 @@ describe(@"APIHelperNews", ^{
     
     context(@"when failed server request", ^{
         
+        NSError *responseError = [NSError errorWithDomain:@"TestDomain" code:0 userInfo:nil];
+        
         beforeAll(^{
-            [OHHTTPStubs
-             stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-                 return
-                 [request.URL.absoluteString isEqualToString:@"http://news.yandex.ru/index.rss"] ?
-                 YES : NO;
-             }
-             withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-                 return [OHHTTPStubsResponse responseWithError:[NSError errorWithDomain:@"TestDomain"
-                                                                                   code:0
-                                                                               userInfo:nil]];
-             }];
+            [OHHTTPStubs setupFailedResponseForAPIHelperNewsWithError:responseError];
         });
         
         afterAll(^{
@@ -189,7 +162,7 @@ describe(@"APIHelperNews", ^{
             [[expectFutureValue(theValue(failed)) shouldEventually] beYes];
         });
         
-        it(@"should contain error in failed block", ^{
+        it(@"should contain error with right domain and code in failed block", ^{
             
             __block NSError *error;
             
@@ -199,10 +172,10 @@ describe(@"APIHelperNews", ^{
                  error = err;
              }];
             
-            [[expectFutureValue(error) shouldNotEventually] beNil];
-            
+            [[expectFutureValue(error.domain) shouldEventually] equal:responseError.domain];
+            [[expectFutureValue(theValue(error.code)) shouldEventually]
+             equal:theValue(responseError.code)];
         });
-        
     });
 });
 

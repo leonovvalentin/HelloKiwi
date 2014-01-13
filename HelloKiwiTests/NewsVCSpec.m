@@ -9,6 +9,7 @@
 
 
 #import "NewsVC.h"
+#import "OHHTTPStubs+Tests.h"
 #import <Kiwi/Kiwi.h>
 
 
@@ -31,9 +32,16 @@ describe(@"NewsVC", ^{
         sut = nil;
     });
     
-    it(@"should ask APIHelper about news after viewWillAppear:", ^{
+    it(@"should ask APIHelper about news in viewWillAppear:", ^{
         [[sut.APIHelper should] receive:@selector(newsWithSuccess:failure:)];
         [sut viewWillAppear:NO];
+    });
+    
+    context(@"after viewWillAppear:", ^{
+        
+        beforeEach(^{
+            [sut viewWillAppear:NO];
+        });
     });
     
     context(@"tableView", ^{
@@ -45,15 +53,13 @@ describe(@"NewsVC", ^{
         });
         
         it(@"should not be nil", ^{
-            [[sut.tableView shouldNot] beNil];
+            [[tableView shouldNot] beNil];
         });
         
         it(@"should be top view", ^{
-            [[sut.view.subviews[0] should] equal:sut.tableView];
+            [[sut.view.subviews[0] should] equal:tableView];
         });
-        
     });
-    
 });
 
 SPEC_END

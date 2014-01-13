@@ -30,6 +30,7 @@
 		EAA42090187FFD7E00945233 /* HelloKiwi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */; };
 		EAA42092188000C700945233 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
 		EAA420951880027100945233 /* APIHelperNews.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA420941880027100945233 /* APIHelperNews.m */; };
+		EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		EAA42091188000C700945233 /* newsResponse.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = newsResponse.rss; sourceTree = "<group>"; };
 		EAA420931880027100945233 /* APIHelperNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelperNews.h; sourceTree = "<group>"; };
 		EAA420941880027100945233 /* APIHelperNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelperNews.m; sourceTree = "<group>"; };
+		EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs+Tests.h"; sourceTree = "<group>"; };
+		EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+Tests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				EAA42082187FF84E00945233 /* NewsVCSpec.m */,
 				58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */,
 				58C4BC701881687100357E76 /* AppDelegateSpec.m */,
+				EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */,
+				EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */,
 				EAA4207D187FF84E00945233 /* Supporting Files */,
 				EAA42091188000C700945233 /* newsResponse.rss */,
 			);
@@ -367,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */,
 				58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */,
 				58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */,
 				EAA42083187FF84E00945233 /* NewsVCSpec.m in Sources */,
