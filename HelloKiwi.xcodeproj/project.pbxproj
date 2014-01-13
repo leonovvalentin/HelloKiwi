@@ -111,6 +111,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA4ADDDA188418FF000A698D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAA420931880027100945233 /* APIHelperNews.h */,
+				EAA420941880027100945233 /* APIHelperNews.m */,
+				5831D71518819CE000884D55 /* News.h */,
+				5831D71618819CE000884D55 /* News.m */,
+				5831D7181881A60200884D55 /* utils.h */,
+				5831D7191881A60200884D55 /* utils.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EA4ADDDB18841914000A698D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAB77E441883EF8E00EDCC3E /* NewsCell.h */,
+				EAB77E451883EF8E00EDCC3E /* NewsCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EA4ADDDD1884193E000A698D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */,
+				EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		EAA42051187FF84E00945233 = {
 			isa = PBXGroup;
 			children = (
@@ -152,17 +183,11 @@
 				EAA4206D187FF84E00945233 /* AppDelegate.m */,
 				EAA4208C187FFBF800945233 /* NewsVC.h */,
 				EAA4208D187FFBF800945233 /* NewsVC.m */,
-				EAA420931880027100945233 /* APIHelperNews.h */,
-				EAA420941880027100945233 /* APIHelperNews.m */,
-				5831D71518819CE000884D55 /* News.h */,
-				5831D71618819CE000884D55 /* News.m */,
-				5831D7181881A60200884D55 /* utils.h */,
-				5831D7191881A60200884D55 /* utils.m */,
-				EAB77E441883EF8E00EDCC3E /* NewsCell.h */,
-				EAB77E451883EF8E00EDCC3E /* NewsCell.m */,
+				EA4ADDDA188418FF000A698D /* Model */,
+				EA4ADDDB18841914000A698D /* Views */,
+				EAA42064187FF84E00945233 /* Supporting Files */,
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
-				EAA42064187FF84E00945233 /* Supporting Files */,
 			);
 			path = HelloKiwi;
 			sourceTree = "<group>";
@@ -185,8 +210,7 @@
 				EADFC29F18840D020012CCB9 /* NewsCellSpec.m */,
 				58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */,
 				58C4BC701881687100357E76 /* AppDelegateSpec.m */,
-				EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */,
-				EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */,
+				EA4ADDDD1884193E000A698D /* Helpers */,
 				EAA4207D187FF84E00945233 /* Supporting Files */,
 				EAA42091188000C700945233 /* newsResponse.rss */,
 			);
