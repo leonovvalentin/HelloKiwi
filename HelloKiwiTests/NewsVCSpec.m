@@ -9,6 +9,7 @@
 
 
 #import "NewsVC.h"
+#import "OHHTTPStubs+Tests.h"
 #import <Kiwi/Kiwi.h>
 
 
@@ -36,15 +37,24 @@ describe(@"NewsVC", ^{
         [sut viewWillAppear:NO];
     });
     
-    context(@"after viewWillAppear:", ^{
+    context(@"with success APIHelper", ^{
         
-        beforeEach(^{
-            [sut viewWillAppear:NO];
+        beforeAll(^{
+            [OHHTTPStubs setupSuccessResponseForAPIHelperNews];
         });
         
-        it(@"should set right news", ^{
-            NSArray *news = @[[[News alloc] init], [[News alloc] init]];
-            [sut.APIHelper stubAndReturn:news] ;
+        afterAll(^{
+            [OHHTTPStubs removeAllStubs];
+        });
+        
+        it(@"should set right news after viewWillAppear:", ^{
+            
+            NSArray *news = @[[[News alloc] init]];
+            [APIHelperNews stub:@selector(newsFromSuccessResponse:) andReturn:news];
+            
+            [sut viewWillAppear:NO];
+            
+            [[expectFutureValue(sut.news) shouldEventually] equal:news];
         });
     });
     
@@ -62,6 +72,15 @@ describe(@"NewsVC", ^{
         
         it(@"should be top view", ^{
             [[sut.view.subviews[0] should] equal:tableView];
+        });
+        
+        it(@"should have 1 section", ^{
+            [[theValue([tableView numberOfSections]) should] equal:theValue(1)];
+        });
+        
+        it(@"should have right count of rows", ^{
+            sut.news = @[[[News alloc] init]];
+            [[theValue([tableView numberOfRowsInSection:0]) should] equal:theValue(1)];
         });
     });
 });

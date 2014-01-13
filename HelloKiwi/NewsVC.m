@@ -12,12 +12,34 @@
 
 
 
+@interface NewsVC () <UITableViewDataSource, UITableViewDelegate>
+@end
+
+
+
 @implementation NewsVC
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.APIHelper newsWithSuccess:nil failure:nil];
+    [self.APIHelper
+     newsWithSuccess:^(NSArray *n) {
+         self.news = n;
+     }
+     failure:nil];
+}
+
+#pragma mark - UITableViewDataSource, UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.news count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [[UITableViewCell alloc] init];
 }
 
 @end

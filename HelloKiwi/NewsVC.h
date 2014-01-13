@@ -15,6 +15,7 @@
 @interface NewsVC : UIViewController
 
 @property (strong, nonatomic) APIHelperNews *APIHelper;
+@property (strong, nonatomic) NSArray *news;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
