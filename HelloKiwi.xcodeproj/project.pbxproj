@@ -14,6 +14,7 @@
 		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
 		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
 		C92CBC43C6514462979607BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8080074748094593914C6262 /* libPods.a */; };
+		EA9431291884F162008B5752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9431281884F162008B5752 /* Localizable.strings */; };
 		EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
 		EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205F187FF84E00945233 /* CoreGraphics.framework */; };
 		EAA42062187FF84E00945233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42061187FF84E00945233 /* UIKit.framework */; };
@@ -56,6 +57,7 @@
 		8080074748094593914C6262 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15D9CDAC0B4F4EAE9331D1 /* libPods-HelloKiwiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloKiwiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C5FCB84F5245A083C18C92 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA9431281884F162008B5752 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		EAA4205A187FF84E00945233 /* HelloKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA4205D187FF84E00945233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAA4205F187FF84E00945233 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 				EAA42064187FF84E00945233 /* Supporting Files */,
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
+				EA9431281884F162008B5752 /* Localizable.strings */,
 			);
 			path = HelloKiwi;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9431291884F162008B5752 /* Localizable.strings in Resources */,
 				EAA42068187FF84E00945233 /* InfoPlist.strings in Resources */,
 				EAA42070187FF84E00945233 /* Images.xcassets in Resources */,
 				58293BC81881ADAA00A2AE10 /* newsResponse.rss in Resources */,

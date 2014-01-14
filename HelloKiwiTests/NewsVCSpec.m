@@ -45,6 +45,10 @@ describe(@"NewsVC", ^{
             [sut viewWillAppear:NO];
         });
         
+        it(@"should have right title", ^{
+            [[sut.title should] equal:NSLocalizedString(@"NewsVCTitle", @"NewsVC title")];
+        });
+        
         context(@"with success APIHelper", ^{
             
             beforeAll(^{

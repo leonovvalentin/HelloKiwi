@@ -20,6 +20,12 @@
 
 @implementation NewsVC
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"NewsVCTitle", @"NewsVC title");
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
