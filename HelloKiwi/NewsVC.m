@@ -66,6 +66,7 @@
     [self.APIHelper
      newsWithSuccess:^(NSArray *n) {
          self.news = n;
+         [self.refreshControl endRefreshing];
      }
      failure:nil];
 }

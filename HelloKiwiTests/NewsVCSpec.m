@@ -91,6 +91,12 @@ describe(@"NewsVC", ^{
                 
                 [[expectFutureValue(sut.news) shouldEventually] equal:news];
             });
+            
+            it(@"should endRefreshing of refreshControl", ^{
+                [[expectFutureValue(sut.refreshControl) shouldEventually] receive:
+                 @selector(endRefreshing)];
+                [sut updateNews];
+            });
         });
         
         context(@"tableView", ^{
