@@ -16,6 +16,9 @@
 
 @property (strong, nonatomic) APIHelperNews *APIHelper;
 @property (strong, nonatomic) NSArray *news;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)updateNews;
 
 @end

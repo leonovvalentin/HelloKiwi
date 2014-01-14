@@ -24,16 +24,18 @@
 {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"NewsVCTitle", @"NewsVC title");
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(updateNews)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.APIHelper
-     newsWithSuccess:^(NSArray *n) {
-         self.news = n;
-     }
-     failure:nil];
+    [self updateNews];
 }
 
 - (void)setNews:(NSArray *)news
@@ -55,6 +57,17 @@
     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     [cell setupWithNews:self.news[indexPath.row]];
     return cell;
+}
+
+#pragma mark - helpers
+
+- (void)updateNews
+{
+    [self.APIHelper
+     newsWithSuccess:^(NSArray *n) {
+         self.news = n;
+     }
+     failure:nil];
 }
 
 @end

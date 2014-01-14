@@ -40,9 +40,32 @@ describe(@"NewsVC", ^{
             [sut view];
         });
         
-        it(@"should ask APIHelper about news in viewWillAppear:", ^{
-            [[sut.APIHelper should] receive:@selector(newsWithSuccess:failure:)];
+        it(@"should awake updateNews in viewWillAppear:", ^{
+            [[sut should] receive:@selector(updateNews)];
             [sut viewWillAppear:NO];
+        });
+        
+        it(@"should awake updateNews in after pullToRefresh", ^{
+            NSArray *actions = 
+            [sut.refreshControl actionsForTarget:sut forControlEvent:UIControlEventValueChanged];
+            
+            NSUInteger indx =
+            [actions indexOfObjectPassingTest:^BOOL(NSString *obj, NSUInteger idx, BOOL *stop) {
+                if ([obj isEqualToString:NSStringFromSelector(@selector(updateNews))]) {
+                    *stop = YES;
+                    return YES;
+                }
+                else {
+                    return NO;
+                }
+            }];
+            
+            [[theValue(indx) shouldNot] equal:theValue(NSNotFound)];
+        });
+        
+        it(@"should ask APIHelper about news in updateNews", ^{
+            [[sut.APIHelper should] receive:@selector(newsWithSuccess:failure:)];
+            [sut updateNews];
         });
         
         it(@"should have right title", ^{
@@ -59,12 +82,12 @@ describe(@"NewsVC", ^{
                 [OHHTTPStubs removeAllStubs];
             });
             
-            it(@"should set right news after viewWillAppear:", ^{
+            it(@"should set right news in updateNews", ^{
                 
                 NSArray *news = @[[[News alloc] init]];
                 [APIHelperNews stub:@selector(newsFromSuccessResponse:) andReturn:news];
                 
-                [sut viewWillAppear:NO];
+                [sut updateNews];
                 
                 [[expectFutureValue(sut.news) shouldEventually] equal:news];
             });
@@ -84,6 +107,10 @@ describe(@"NewsVC", ^{
             
             it(@"should be top view", ^{
                 [[sut.view.subviews[0] should] equal:tableView];
+            });
+            
+            it(@"should have refreshView as subview", ^{
+                [[tableView.subviews should] containObjectsInArray:@[sut.refreshControl]];
             });
             
             it(@"should reload data after setNews:", ^{
