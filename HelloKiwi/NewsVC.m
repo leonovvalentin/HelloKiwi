@@ -9,6 +9,7 @@
 
 
 #import "NewsVC.h"
+#import "NewsDetailVC.h"
 #import "NewsCell.h"
 
 
@@ -19,6 +20,8 @@
 
 
 @implementation NewsVC
+
+#pragma mark - view
 
 - (void)viewDidLoad
 {
@@ -37,6 +40,16 @@
     [super viewWillAppear:animated];
     [self updateNews];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[NewsDetailVC class]]) {
+        [(NewsDetailVC *)segue.destinationViewController setNews:
+         self.news[[self.tableView indexPathForCell:sender].row]];
+    }
+}
+
+#pragma mark - properties
 
 - (void)setNews:(NSArray *)news
 {

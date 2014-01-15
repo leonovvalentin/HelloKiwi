@@ -22,7 +22,7 @@
         <!--NewsVC-->
         <scene sceneID="TSY-EZ-Qhh">
             <objects>
-                <viewController id="y3x-gl-tqP" customClass="NewsVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsVC" id="y3x-gl-tqP" customClass="NewsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VlL-3k-pKR"/>
                         <viewControllerLayoutGuide type="bottom" id="eOE-wZ-wTb"/>
@@ -36,11 +36,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="Jrg-78-Xfd" customClass="NewsCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="Jrg-78-Xfd" customClass="NewsCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jrg-78-Xfd" id="7EA-h8-fFL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Label Label Label Label Label Label Label Label Label Label Label " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-S4-bck">
@@ -62,6 +62,7 @@
                                         <connections>
                                             <outlet property="pubDateLabel" destination="1HG-7H-iNz" id="9lp-wP-gzv"/>
                                             <outlet property="titleLabel" destination="Pn3-S4-bck" id="r3n-z6-h2z"/>
+                                            <segue destination="cA3-p1-oYQ" kind="push" identifier="" id="jNB-W2-m85"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +86,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gg-oS-8mQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853" y="145"/>
+        </scene>
+        <!--News DetailVC-->
+        <scene sceneID="kT7-PJ-wvK">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailVC" id="cA3-p1-oYQ" customClass="NewsDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zdL-fc-hht"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Uz-nL-q4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84A-HA-heo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aWw-pM-Iuh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoz-hC-AFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="145"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

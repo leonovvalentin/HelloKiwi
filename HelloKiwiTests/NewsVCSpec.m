@@ -9,9 +9,11 @@
 
 
 #import "NewsVC.h"
+#import "NewsDetailVC.h"
 #import "NewsCell.h"
 
 #import "OHHTTPStubs+Tests.h"
+#import "News+Tests.h"
 
 #import <Kiwi/Kiwi.h>
 
@@ -24,9 +26,8 @@ describe(@"NewsVC", ^{
     __block NewsVC *sut;
     
     beforeEach(^{
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil];
-        UINavigationController *NC = [sb instantiateInitialViewController];
-        sut = (NewsVC *)NC.topViewController;
+        sut = (NewsVC *)[[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
+                         instantiateViewControllerWithIdentifier:@"NewsVC"];
         sut.APIHelper = [[APIHelperNews alloc] init];
     });
     
@@ -46,7 +47,7 @@ describe(@"NewsVC", ^{
         });
         
         it(@"should awake updateNews in after pullToRefresh", ^{
-            NSArray *actions = 
+            NSArray *actions =
             [sut.refreshControl actionsForTarget:sut forControlEvent:UIControlEventValueChanged];
             
             NSUInteger indx =
@@ -70,6 +71,52 @@ describe(@"NewsVC", ^{
         
         it(@"should have right title", ^{
             [[sut.title should] equal:NSLocalizedString(@"NewsVCTitle", @"NewsVC title")];
+        });
+        
+        context(@"in prepareForSegue:sender: with NewsDetailVC as destination", ^{
+            
+            __block NewsDetailVC *detailVC;
+            __block UIStoryboardSegue *segue;
+            
+            beforeEach(^{
+                sut.news = @[[News testNews], [News anotherTestNews]];
+                detailVC = [[NewsDetailVC alloc] init];
+                segue = [UIStoryboardSegue segueWithIdentifier:nil
+                                                        source:sut
+                                                   destination:detailVC
+                                                performHandler:^{}];
+            });
+            
+            it(@"should send first news to destination VC if first cell was selected ", ^{
+                   
+                   [sut prepareForSegue:segue
+                                 sender:[sut.tableView cellForRowAtIndexPath:
+                                         [NSIndexPath indexPathForRow:0 inSection:0]]];
+                   
+                   [[detailVC.news should] equal:sut.news.firstObject];
+               });
+            
+            it(@"should send second news to destination VC if second cell was selected ", ^{
+                   
+                   [sut prepareForSegue:segue
+                                 sender:[sut.tableView cellForRowAtIndexPath:
+                                         [NSIndexPath indexPathForRow:1 inSection:0]]];
+                   
+                   [[detailVC.news should] equal:sut.news.lastObject];
+               });
+        });
+        
+        it(@"should not crash if in prepareForSegue:sender: destination is not NewsDetailVC", ^{
+            
+            UIViewController *VC = [[UIViewController alloc] init];
+            UIStoryboardSegue *segue = [UIStoryboardSegue segueWithIdentifier:nil
+                                                                       source:sut
+                                                                  destination:VC
+                                                               performHandler:^{}];
+            
+            [[theBlock(^{
+                [sut prepareForSegue:segue sender:nil];
+            }) shouldNot] raise];
         });
         
         context(@"with success APIHelper", ^{
@@ -129,14 +176,7 @@ describe(@"NewsVC", ^{
                 __block News *newsItem;
                 
                 beforeEach(^{
-                    
-                    newsItem = [[News alloc] init];
-                    newsItem.title = @"One news";
-                    newsItem.link = @"http://one.news.com";
-                    newsItem.descriptionOfNews = @"Ordinary news";
-                    newsItem.pubDate = [NSDate date];
-                    newsItem.guid = @"http://one.news.com/guid";
-                    
+                    newsItem = [News testNews];
                     sut.news = @[newsItem];
                 });
                 
