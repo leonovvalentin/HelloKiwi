@@ -7,47 +7,47 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForProfiling = "YES"
-            buildForRunning = "YES"
-            buildForArchiving = "YES"
             buildForTesting = "YES"
-            buildForAnalyzing = "YES">
+            buildForRunning = "YES"
+            buildForAnalyzing = "YES"
+            buildForArchiving = "YES"
+            buildForProfiling = "YES">
             <BuildableReference
+               BlueprintIdentifier = "9A79ED0E94394776B572F016"
+               BlueprintName = "Pods-HelloKiwiTests"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BlueprintIdentifier = "B5AA9D05FBEE4A1EBA6CAB60"
                BuildableName = "libPods-HelloKiwiTests.a"
-               BuildableIdentifier = "primary"
-               BlueprintName = "Pods-HelloKiwiTests">
+               BuildableIdentifier = "primary">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      useCustomWorkingDirectory = "NO"
+      launchStyle = "0"
       allowLocationSimulation = "YES"
       ignoresPersistentStateOnLaunch = "NO"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      launchStyle = "0"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug"
+      debugDocumentVersioning = "YES">
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      savedToolIdentifier = ""
-      useCustomWorkingDirectory = "NO"
       shouldUseLaunchSchemeArgsEnv = "YES"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
       debugDocumentVersioning = "YES"
-      buildConfiguration = "Release">
+      savedToolIdentifier = "">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
