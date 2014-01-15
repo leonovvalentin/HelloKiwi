@@ -70,6 +70,12 @@ describe(@"NewsDetailVC", ^{
         it(@"should have right pubDateLabel", ^{
             [[sut.pubDateLabel.text should] equal:sut.news.pubDate.description];
         });
+        
+        it(@"should open safary after linkLabelTapped: ", ^{
+            [[[UIApplication sharedApplication] should] receive:@selector(openURL:)
+                                                  withArguments:[NSURL URLWithString:sut.news.link]];
+            [sut linkLabelTapped:nil];
+        });
     });
 });
 

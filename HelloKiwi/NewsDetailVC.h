@@ -21,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *linkLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pubDateLabel;
 
+- (IBAction)linkLabelTapped:(id)sender;
+
 @end

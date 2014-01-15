@@ -33,4 +33,9 @@
     self.pubDateLabel.text = self.news.pubDate.description;
 }
 
+- (IBAction)linkLabelTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.news.link]];
+}
+
 @end
