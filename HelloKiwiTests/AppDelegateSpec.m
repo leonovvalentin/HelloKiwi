@@ -37,7 +37,8 @@ describe(@"AppDelegate", ^{
         
         [sut application:nil didFinishLaunchingWithOptions:nil];
         
-        UINavigationController *NC = (UINavigationController *)sut.window.rootViewController;
+        UITabBarController *tabBarController = (UITabBarController *)sut.window.rootViewController;
+        UINavigationController *NC = (UINavigationController *)tabBarController.viewControllers[0];
         NewsVC *VC = (NewsVC *)NC.topViewController;
         [[VC.APIHelper should] beKindOfClass:[APIHelperNews class]];
     });

@@ -17,7 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *NC = (UINavigationController *)self.window.rootViewController;
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *NC = (UINavigationController *)tabBarController.viewControllers[0];
     NewsVC *VC = (NewsVC *)NC.topViewController;
     VC.APIHelper = [[APIHelperNews alloc] init];
     
