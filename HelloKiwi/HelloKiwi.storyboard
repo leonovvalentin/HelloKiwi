@@ -124,6 +124,7 @@
                                             <constraint firstAttribute="width" constant="280" id="5Rx-3b-gao"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.15294118225574493" green="0.47843140363693237" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Er7-R8-qTD" appends="YES" id="6qJ-x2-3yR"/>
