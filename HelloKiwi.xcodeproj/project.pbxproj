@@ -14,6 +14,7 @@
 		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
 		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
 		C92CBC43C6514462979607BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8080074748094593914C6262 /* libPods.a */; };
+		EA260349188663E8006B4069 /* NSString+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260348188663E8006B4069 /* NSString+Tests.m */; };
 		EA8F12911885106500197770 /* News+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F12901885106500197770 /* News+Tests.m */; };
 		EA9431291884F162008B5752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9431281884F162008B5752 /* Localizable.strings */; };
 		EAA2C4E418850A9100267188 /* NewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2C4E318850A9100267188 /* NewsDetailVC.m */; };
@@ -60,6 +61,8 @@
 		8080074748094593914C6262 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15D9CDAC0B4F4EAE9331D1 /* libPods-HelloKiwiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloKiwiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C5FCB84F5245A083C18C92 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA260347188663E8006B4069 /* NSString+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tests.h"; sourceTree = "<group>"; };
+		EA260348188663E8006B4069 /* NSString+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tests.m"; sourceTree = "<group>"; };
 		EA8F128F1885106500197770 /* News+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "News+Tests.h"; sourceTree = "<group>"; };
 		EA8F12901885106500197770 /* News+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "News+Tests.m"; sourceTree = "<group>"; };
 		EA9431281884F162008B5752 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */,
 				EA8F128F1885106500197770 /* News+Tests.h */,
 				EA8F12901885106500197770 /* News+Tests.m */,
+				EA260347188663E8006B4069 /* NSString+Tests.h */,
+				EA260348188663E8006B4069 /* NSString+Tests.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */,
+				EA260349188663E8006B4069 /* NSString+Tests.m in Sources */,
 				58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */,
 				EA8F12911885106500197770 /* News+Tests.m in Sources */,
 				58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */,

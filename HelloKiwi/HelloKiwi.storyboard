@@ -116,11 +116,30 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B90-ch-7Eh" userLabel="linkLabel">
+                                        <rect key="frame" x="20" y="122" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="5Rx-3b-gao"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czb-4V-xzo" userLabel="pubDateLabel">
+                                        <rect key="frame" x="20" y="151" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="B90-ch-7Eh" firstAttribute="top" secondItem="f5T-nN-FAC" secondAttribute="bottom" constant="8" id="HrM-Ok-mXB"/>
+                                    <constraint firstAttribute="trailing" secondItem="B90-ch-7Eh" secondAttribute="trailing" constant="20" id="J4H-Cd-bhR"/>
                                     <constraint firstItem="CI1-tE-xM9" firstAttribute="top" secondItem="2ja-wc-2S1" secondAttribute="top" constant="20" id="Taa-SG-MjJ"/>
                                     <constraint firstItem="f5T-nN-FAC" firstAttribute="top" secondItem="CI1-tE-xM9" secondAttribute="bottom" constant="8" id="WhD-YC-Tc2"/>
-                                    <constraint firstAttribute="bottom" secondItem="f5T-nN-FAC" secondAttribute="bottom" constant="20" id="auT-0U-LQH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Czb-4V-xzo" secondAttribute="bottom" constant="20" id="fgP-CX-15Z"/>
+                                    <constraint firstItem="Czb-4V-xzo" firstAttribute="top" secondItem="B90-ch-7Eh" secondAttribute="bottom" constant="8" id="otC-vh-Eyr"/>
+                                    <constraint firstItem="B90-ch-7Eh" firstAttribute="leading" secondItem="2ja-wc-2S1" secondAttribute="leading" constant="20" id="xvM-nu-KcC"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -133,6 +152,8 @@
                     <navigationItem key="navigationItem" id="aWw-pM-Iuh"/>
                     <connections>
                         <outlet property="descriptionOfNewsLabel" destination="f5T-nN-FAC" id="tKF-hS-iMy"/>
+                        <outlet property="linkLabel" destination="B90-ch-7Eh" id="LQm-7t-Zgh"/>
+                        <outlet property="pubDateLabel" destination="Czb-4V-xzo" id="FMh-xS-kkr"/>
                         <outlet property="titleLabel" destination="CI1-tE-xM9" id="RTd-8m-tCf"/>
                     </connections>
                 </viewController>

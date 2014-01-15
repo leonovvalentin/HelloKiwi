@@ -28,6 +28,9 @@
     
     self.descriptionOfNewsLabel.text = self.news.descriptionOfNews;
     [self.descriptionOfNewsLabel sizeToFit];
+    
+    self.linkLabel.text = self.news.link;
+    self.pubDateLabel.text = self.news.pubDate.description;
 }
 
 @end

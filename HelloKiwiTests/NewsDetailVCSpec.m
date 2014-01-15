@@ -9,7 +9,10 @@
 
 
 #import "NewsDetailVC.h"
+
 #import "News+Tests.h"
+#import "NSString+Tests.h"
+
 #import <Kiwi/Kiwi.h>
 
 
@@ -40,62 +43,32 @@ describe(@"NewsDetailVC", ^{
             [[sut.title should] beNil];
         });
         
-        context(@"titleLabel", ^{
-            
-            __block UILabel *titleLabel;
-            
-            beforeEach(^{
-                titleLabel = sut.titleLabel;
-            });
-            
-            afterEach(^{
-                titleLabel = nil;
-            });
-            
-            it(@"should have right text", ^{
-                [[titleLabel.text should] equal:sut.news.title];
-            });
-            
-            it(@"should have right size", ^{
-                CGSize size =
-                [sut.news.title
-                 boundingRectWithSize:CGSizeMake(sut.titleLabel.frame.size.width, CGFLOAT_MAX)
-                 options:NSStringDrawingUsesLineFragmentOrigin | sut.titleLabel.lineBreakMode
-                 attributes:@{NSFontAttributeName : sut.titleLabel.font}
-                 context:nil].size;
-                
-                [[theValue(sut.titleLabel.frame.size.height) should] equal:size.height
-                                                                 withDelta:1.0];
-            });
+        it(@"should have right titleLabel text", ^{
+            [[sut.titleLabel.text should] equal:sut.news.title];
         });
         
-        context(@"desctiptionOfNewsLabel", ^{
-            
-            __block UILabel *descriptionOfNewsLabel;
-            
-            beforeEach(^{
-                descriptionOfNewsLabel = sut.descriptionOfNewsLabel;
-            });
-            
-            afterEach(^{
-                descriptionOfNewsLabel = nil;
-            });
-            
-            it(@"should have right text", ^{
-                [[descriptionOfNewsLabel.text should] equal:sut.news.descriptionOfNews];
-            });
-            
-            it(@"should have right size", ^{
-                CGSize size =
-                [sut.news.descriptionOfNews
-                 boundingRectWithSize:CGSizeMake(sut.descriptionOfNewsLabel.frame.size.width, CGFLOAT_MAX)
-                 options:NSStringDrawingUsesLineFragmentOrigin | sut.descriptionOfNewsLabel.lineBreakMode
-                 attributes:@{NSFontAttributeName : sut.descriptionOfNewsLabel.font}
-                 context:nil].size;
-                
-                [[theValue(sut.descriptionOfNewsLabel.frame.size.height) should] equal:size.height
-                                                                             withDelta:1.0];
-            });
+        it(@"should have titleLabel height", ^{
+            [[theValue(sut.titleLabel.frame.size.height) should]
+             equal:[sut.news.title rightSizeInLabel:sut.titleLabel].height
+             withDelta:1.0];
+        });
+        
+        it(@"should have right descriptionOfNewsLabel", ^{
+            [[sut.descriptionOfNewsLabel.text should] equal:sut.news.descriptionOfNews];
+        });
+        
+        it(@"should have right descriptionOfNewsLabel height", ^{
+            [[theValue(sut.descriptionOfNewsLabel.frame.size.height) should]
+             equal:[sut.news.descriptionOfNews rightSizeInLabel:sut.descriptionOfNewsLabel].height
+             withDelta:1.0];
+        });
+        
+        it(@"should have right linkLabel", ^{
+            [[sut.linkLabel.text should] equal:sut.news.link];
+        });
+        
+        it(@"should have right pubDateLabel", ^{
+            [[sut.pubDateLabel.text should] equal:sut.news.pubDate.description];
         });
     });
 });

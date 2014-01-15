@@ -18,5 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionOfNewsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *linkLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pubDateLabel;
 
 @end
