@@ -22,7 +22,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = self.news.title;
+    
+    self.titleLabel.text = self.news.title;
+    [self.titleLabel sizeToFit];
+    
+    self.descriptionOfNewsLabel.text = self.news.descriptionOfNews;
+    [self.descriptionOfNewsLabel sizeToFit];
 }
 
 @end

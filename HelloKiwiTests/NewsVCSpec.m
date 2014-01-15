@@ -35,7 +35,7 @@ describe(@"NewsVC", ^{
         sut = nil;
     });
     
-    context(@"after viewDidLoad", ^{
+    context(@"after view was loaded", ^{
         
         beforeEach(^{
             [sut view];
