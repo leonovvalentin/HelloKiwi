@@ -30,6 +30,10 @@ describe(@"ImageVC", ^{
         sut = nil;
     });
     
+    it(@"should have rigth title", ^{
+        [[sut.title should] equal:NSLocalizedString(@"ImagesVCTitle", @"Images VC title")];
+    });
+    
     it(@"should return nil in pageViewController:viewControllerBeforeViewController: if VC is first \
        VC", ^{
            [[[sut pageViewController:nil

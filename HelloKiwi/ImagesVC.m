@@ -19,6 +19,29 @@
 
 @implementation ImagesVC
 
+#pragma mark - init
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup
+{
+    self.title = NSLocalizedString(@"ImagesVCTitle", @"ImagesVC title");
+}
+
 #pragma mark - view
 
 - (void)viewDidLoad

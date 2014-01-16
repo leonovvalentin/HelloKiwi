@@ -39,10 +39,6 @@ describe(@"NewsDetailVC", ^{
             [sut view];
         });
         
-        it(@"title should be nil", ^{
-            [[sut.title should] beNil];
-        });
-        
         it(@"should have right titleLabel text", ^{
             [[sut.titleLabel.text should] equal:sut.news.title];
         });

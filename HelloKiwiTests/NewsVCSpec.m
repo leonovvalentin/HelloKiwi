@@ -35,6 +35,10 @@ describe(@"NewsVC", ^{
         sut = nil;
     });
     
+    it(@"should have right title", ^{
+        [[sut.title should] equal:NSLocalizedString(@"NewsVCTitle", @"NewsVC title")];
+    });
+    
     context(@"after view was loaded", ^{
         
         beforeEach(^{
@@ -67,10 +71,6 @@ describe(@"NewsVC", ^{
         it(@"should ask APIHelper about news in updateNews", ^{
             [[sut.APIHelper should] receive:@selector(newsWithSuccess:failure:)];
             [sut updateNews];
-        });
-        
-        it(@"should have right title", ^{
-            [[sut.title should] equal:NSLocalizedString(@"NewsVCTitle", @"NewsVC title")];
         });
         
         context(@"in prepareForSegue:sender: with NewsDetailVC as destination", ^{
