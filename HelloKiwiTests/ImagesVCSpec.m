@@ -77,6 +77,10 @@ describe(@"ImageVC", ^{
          equal:theValue([sut.viewControllers count])];
     });
     
+    it(@"should return right value in presentationIndexForPageViewController:", ^{
+        [[theValue([sut presentationIndexForPageViewController:nil]) should] equal:theValue(0)];
+    });
+    
     context(@"after view was loaded", ^{
         
         beforeEach(^{
@@ -91,8 +95,15 @@ describe(@"ImageVC", ^{
                 pageVC = sut.pageVC;
             });
             
-            it(@"should not be nil", ^{
-                [[pageVC shouldNot] beNil];
+            it(@"view should have right frame", ^{
+                CGFloat height =
+                sut.view.bounds.size.height - sut.tabBarController.tabBar.frame.size.height;
+                
+                [[theValue(pageVC.view.frame) should]
+                 equal:theValue(CGRectMake(0.0f,
+                                           0.0f,
+                                           sut.view.bounds.size.width,
+                                           height))];
             });
             
             it(@"should have right transitionStyle", ^{

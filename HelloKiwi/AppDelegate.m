@@ -25,9 +25,10 @@
     newsVC.APIHelper = [[APIHelperNews alloc] init];
     
     ImagesVC *imagesVC = (ImagesVC *)tabBarController.viewControllers[1];
-    imagesVC.viewControllers = @[[[UIViewController alloc] init],
-                                 [[UIViewController alloc] init],
-                                 [[UIViewController alloc] init]];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil];
+    imagesVC.viewControllers = @[[sb instantiateViewControllerWithIdentifier:@"page0"],
+                                 [sb instantiateViewControllerWithIdentifier:@"page1"],
+                                 [sb instantiateViewControllerWithIdentifier:@"page2"]];
     
     return YES;
 }

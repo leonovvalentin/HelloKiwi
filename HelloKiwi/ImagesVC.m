@@ -58,6 +58,13 @@
                            animated:YES
                          completion:nil];
     
+    CGFloat height =
+    self.view.bounds.size.height - self.tabBarController.tabBar.frame.size.height;
+    self.pageVC.view.frame = CGRectMake(0.0f,
+                                        0.0f,
+                                        self.view.bounds.size.width,
+                                        height);
+    
     [self addChildViewController:self.pageVC];
     [self.view addSubview:self.pageVC.view];
 }
@@ -83,6 +90,11 @@
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
     return [self.viewControllers count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 @end
