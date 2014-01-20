@@ -99,8 +99,8 @@
 - (void)updateNews
 {
     [self.APIHelper
-     newsWithSuccess:^(NSArray *n) {
-         self.news = n;
+     newsWithSuccess:^(NSArray *news) {
+         self.news = news;
          [self.refreshControl endRefreshing];
      }
      failure:nil];
