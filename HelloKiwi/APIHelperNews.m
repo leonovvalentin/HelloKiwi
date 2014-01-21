@@ -38,15 +38,14 @@
 
 + (NSArray *)newsFromSuccessResponse:(NSData *)responseObject
 {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+    
     NSMutableArray *news = [NSMutableArray array];
     RXMLElement *channelXML = [[RXMLElement elementFromXMLData:responseObject]
                                child:@"channel"];
     NSArray *elements = [channelXML children:@"item"];
     for (RXMLElement *element in elements) {
-        
-        News *newsItem =
-        [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
-        
+        News *newsItem = [News MR_createInContext:context];
         newsItem.title = [element child:@"title"].text;
         newsItem.link = [element child:@"link"].text;
         newsItem.descriptionOfNews = [element child:@"description"].text;
@@ -55,6 +54,7 @@
         [news addObject:newsItem];
     }
     
+    [context MR_saveOnlySelfAndWait];
     return news.copy;
 }
 

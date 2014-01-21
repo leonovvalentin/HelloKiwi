@@ -29,10 +29,12 @@ describe(@"NewsVC", ^{
         sut = (NewsVC *)[[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
                          instantiateViewControllerWithIdentifier:@"NewsVC"];
         sut.APIHelper = [[APIHelperNews alloc] init];
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
     });
     
     afterEach(^{
         sut = nil;
+        [MagicalRecord cleanUp];
     });
     
     it(@"should have right title", ^{
@@ -48,6 +50,22 @@ describe(@"NewsVC", ^{
         it(@"should awake updateNews in viewWillAppear:", ^{
             [[sut should] receive:@selector(updateNews)];
             [sut viewWillAppear:NO];
+        });
+        
+        it(@"should set stored news ordered by pubDate in viewWillAppear:", ^{
+            
+            NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+            
+            News *news1 = [News MR_createInContext:context];
+            news1.pubDate = [NSDate distantPast];
+            
+            News *news2 = [News MR_createInContext:context];
+            news2.pubDate = [NSDate distantFuture];
+            
+            [context MR_saveOnlySelfAndWait];
+            
+            [sut viewWillAppear:NO];
+            [[sut.news should] equal:@[news2, news1]];
         });
         
         it(@"should awake updateNews in after pullToRefresh", ^{
@@ -129,16 +147,15 @@ describe(@"NewsVC", ^{
                 [OHHTTPStubs removeAllStubs];
             });
             
-            it(@"should set right news in updateNews", ^{
+            it(@"should set right news ordered by pubDate in updateNews", ^{
                 
-                NSArray *news =
-                @[[News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]]];
-                
-                [APIHelperNews stub:@selector(newsFromSuccessResponse:) andReturn:news];
+                [APIHelperNews stub:@selector(newsFromSuccessResponse:)
+                          andReturn:@[[News testNews], [News anotherTestNews]]];
                 
                 [sut updateNews];
                 
-                [[expectFutureValue(sut.news) shouldEventually] equal:news];
+                [[expectFutureValue(sut.news) shouldEventually] equal:
+                 [News MR_findAllSortedBy:NSStringFromSelector(@selector(pubDate)) ascending:NO]];
             });
             
             it(@"should endRefreshing of refreshControl", ^{

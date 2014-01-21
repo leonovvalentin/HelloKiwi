@@ -25,33 +25,51 @@ describe(@"APIHelperNews", ^{
     
     beforeEach(^{
         sut = [[APIHelperNews alloc] init];
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
     });
     
     afterEach(^{
         sut = nil;
+        [MagicalRecord cleanUp];
     });
     
-    it(@"newsFromSuccessResponse: should return right news", ^{
-        NSArray *news =
-        [[sut class] newsFromSuccessResponse:
-         [NSData dataWithContentsOfFile:OHPathForFileInBundle(@"newsResponse.rss", nil)]];
+    context(@"newsFromSuccessResponse:", ^{
         
-        News *newsItem = news.firstObject;
+        __block NSArray *news;
         
-        [[theValue([newsItem.title isEqualToString:
-                    @"Прокуратура возбудила дело об избиении Юрия Луценко"]) should] beYes];
+        beforeEach(^{
+            news =
+            [[sut class] newsFromSuccessResponse:
+             [NSData dataWithContentsOfFile:OHPathForFileInBundle(@"newsResponse.rss", nil)]];
+        });
         
-        [[theValue([newsItem.link isEqualToString:
-                    @"http://news.yandex.ru/yandsearch?cl4url=www.rg.ru%2F2014%2F01%2F11%2Fluzenko-site-anons.html"]) should] beYes];
+        afterEach(^{
+            news = nil;
+        });
         
-        [[theValue([newsItem.descriptionOfNews isEqualToString:
-         @"&quot;В отношении применения силы к оппозиции и получения телесных повреждений Юрием Луценко на проспекте Перемоги 109 прокуратура Киева начала криминальное расследование по статье превышение служебных полномочий&quot;, - информировала Соболевская."]) should] beYes];
+        it(@"should return right news", ^{
+            
+            News *newsItem = news.firstObject;
+            
+            [[theValue([newsItem.title isEqualToString:
+                        @"Прокуратура возбудила дело об избиении Юрия Луценко"]) should] beYes];
+            
+            [[theValue([newsItem.link isEqualToString:
+                        @"http://news.yandex.ru/yandsearch?cl4url=www.rg.ru%2F2014%2F01%2F11%2Fluzenko-site-anons.html"]) should] beYes];
+            
+            [[theValue([newsItem.descriptionOfNews isEqualToString:
+                        @"&quot;В отношении применения силы к оппозиции и получения телесных повреждений Юрием Луценко на проспекте Перемоги 109 прокуратура Киева начала криминальное расследование по статье превышение служебных полномочий&quot;, - информировала Соболевская."]) should] beYes];
+            
+            [[theValue([newsItem.guid isEqualToString:
+                        @"http://news.yandex.ru/yandsearch?cl4url=www.rg.ru%2F2014%2F01%2F11%2Fluzenko-site-anons.html"]) should] beYes];
+            
+            [[theValue([newsItem.pubDate isEqualToDate:
+                        [NSDate dateFromString:@"11 Jan 2014 12:47:00 +0400"]]) should] beYes];
+        });
         
-        [[theValue([newsItem.guid isEqualToString:
-         @"http://news.yandex.ru/yandsearch?cl4url=www.rg.ru%2F2014%2F01%2F11%2Fluzenko-site-anons.html"]) should] beYes];
-        
-        [[theValue([newsItem.pubDate isEqualToDate:
-         [NSDate dateFromString:@"11 Jan 2014 12:47:00 +0400"]]) should] beYes];
+        it(@"should save context after parse news", ^{
+            [[[News MR_findAll] should] containObjectsInArray:news];
+        });
     });
     
     context(@"when success server response", ^{

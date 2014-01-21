@@ -18,18 +18,23 @@
 
 + (News *)testNews
 {
-    News *news = [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+    
+    News *news = [News MR_createInContext:context];
     news.title = @"One news";
     news.link = @"http://one.news.com";
     news.descriptionOfNews = @"Ordinary news";
     news.pubDate = [NSDate date];
     news.guid = @"http://one.news.com/guid";
     
+    [context MR_saveOnlySelfAndWait];
     return news;
 }
 
 + (News *)anotherTestNews
 {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+    
     News *news = [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
     news.title = @"One more news";
     news.link = @"http://one.more.news.com";
@@ -37,6 +42,7 @@
     news.pubDate = [NSDate date];
     news.guid = @"http://one.more.news.com/guid";
     
+    [context MR_saveOnlySelfAndWait];
     return news;
 }
 

@@ -60,6 +60,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self resetNews];
     [self updateNews];
 }
 
@@ -100,10 +101,15 @@
 {
     [self.APIHelper
      newsWithSuccess:^(NSArray *news) {
-         self.news = news;
+         [self resetNews];
          [self.refreshControl endRefreshing];
      }
      failure:nil];
+}
+
+- (void)resetNews
+{
+    self.news = [News MR_findAllSortedBy:NSStringFromSelector(@selector(pubDate)) ascending:NO];
 }
 
 @end
