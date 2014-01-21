@@ -35,6 +35,12 @@ describe(@"AppDelegate", ^{
         sut = nil;
     });
     
+    it(@"should setup MagicalRecord when application:didFinishLaunchingWithOptions:", ^{
+        [[MagicalRecord should] receive:@selector(setupCoreDataStackWithStoreNamed:)
+                          withArguments:@"Model.sqlite"];
+        [sut application:nil didFinishLaunchingWithOptions:nil];
+    });
+    
     context(@"after application:didFinishLaunchingWithOptions:", ^{
         
         beforeEach(^{

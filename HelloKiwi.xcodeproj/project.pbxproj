@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F7226B8F5FC43C784320F98 /* libPods-HelloKiwiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF15D9CDAC0B4F4EAE9331D1 /* libPods-HelloKiwiTests.a */; };
 		58293BC81881ADAA00A2AE10 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
-		5831D71718819CE000884D55 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D71618819CE000884D55 /* News.m */; };
 		5831D71A1881A60200884D55 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D7191881A60200884D55 /* utils.m */; };
 		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
 		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
@@ -17,6 +16,9 @@
 		EA21375318868E07007E0E77 /* ImagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21375218868E07007E0E77 /* ImagesVC.m */; };
 		EA21375718868FBB007E0E77 /* ImagesVCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21375618868FBB007E0E77 /* ImagesVCSpec.m */; };
 		EA260349188663E8006B4069 /* NSString+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260348188663E8006B4069 /* NSString+Tests.m */; };
+		EA70A14E188E507800D81A9E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA70A14C188E507800D81A9E /* Model.xcdatamodeld */; };
+		EA70A151188E535400D81A9E /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = EA70A150188E535400D81A9E /* News.m */; };
+		EA70A153188E571500D81A9E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA70A152188E571500D81A9E /* CoreData.framework */; };
 		EA8F12911885106500197770 /* News+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F12901885106500197770 /* News+Tests.m */; };
 		EA9431291884F162008B5752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9431281884F162008B5752 /* Localizable.strings */; };
 		EAA2C4E418850A9100267188 /* NewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2C4E318850A9100267188 /* NewsDetailVC.m */; };
@@ -53,8 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5831D71518819CE000884D55 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
-		5831D71618819CE000884D55 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		5831D7181881A60200884D55 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		5831D7191881A60200884D55 /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelperNewsSpec.m; sourceTree = "<group>"; };
@@ -68,6 +68,10 @@
 		EA21375618868FBB007E0E77 /* ImagesVCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesVCSpec.m; sourceTree = "<group>"; };
 		EA260347188663E8006B4069 /* NSString+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tests.h"; sourceTree = "<group>"; };
 		EA260348188663E8006B4069 /* NSString+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tests.m"; sourceTree = "<group>"; };
+		EA70A14D188E507800D81A9E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EA70A14F188E535400D81A9E /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		EA70A150188E535400D81A9E /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		EA70A152188E571500D81A9E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EA8F128F1885106500197770 /* News+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "News+Tests.h"; sourceTree = "<group>"; };
 		EA8F12901885106500197770 /* News+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "News+Tests.m"; sourceTree = "<group>"; };
 		EA9431281884F162008B5752 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA70A153188E571500D81A9E /* CoreData.framework in Frameworks */,
 				EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */,
 				EAA42062187FF84E00945233 /* UIKit.framework in Frameworks */,
 				EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */,
@@ -152,10 +157,10 @@
 		EA4ADDDA188418FF000A698D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA70A14F188E535400D81A9E /* News.h */,
+				EA70A150188E535400D81A9E /* News.m */,
 				EAA420931880027100945233 /* APIHelperNews.h */,
 				EAA420941880027100945233 /* APIHelperNews.m */,
-				5831D71518819CE000884D55 /* News.h */,
-				5831D71618819CE000884D55 /* News.m */,
 				5831D7181881A60200884D55 /* utils.h */,
 				5831D7191881A60200884D55 /* utils.m */,
 			);
@@ -208,6 +213,7 @@
 		EAA4205C187FF84E00945233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA70A152188E571500D81A9E /* CoreData.framework */,
 				EAA4205D187FF84E00945233 /* Foundation.framework */,
 				EAA4205F187FF84E00945233 /* CoreGraphics.framework */,
 				EAA42061187FF84E00945233 /* UIKit.framework */,
@@ -230,6 +236,7 @@
 				EAA42064187FF84E00945233 /* Supporting Files */,
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
+				EA70A14C188E507800D81A9E /* Model.xcdatamodeld */,
 				EA9431281884F162008B5752 /* Localizable.strings */,
 			);
 			path = HelloKiwi;
@@ -437,13 +444,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5831D71718819CE000884D55 /* News.m in Sources */,
+				EA70A151188E535400D81A9E /* News.m in Sources */,
 				EA21375318868E07007E0E77 /* ImagesVC.m in Sources */,
 				EAA420951880027100945233 /* APIHelperNews.m in Sources */,
 				EAA2C4E418850A9100267188 /* NewsDetailVC.m in Sources */,
 				EAA4208E187FFBF800945233 /* NewsVC.m in Sources */,
 				EAB77E461883EF8E00EDCC3E /* NewsCell.m in Sources */,
 				5831D71A1881A60200884D55 /* utils.m in Sources */,
+				EA70A14E188E507800D81A9E /* Model.xcdatamodeld in Sources */,
 				EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */,
 				EAA4206A187FF84E00945233 /* main.m in Sources */,
 			);
@@ -672,6 +680,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA70A14C188E507800D81A9E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA70A14D188E507800D81A9E /* Model.xcdatamodel */,
+			);
+			currentVersion = EA70A14D188E507800D81A9E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EAA42052187FF84E00945233 /* Project object */;
 }

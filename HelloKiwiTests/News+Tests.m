@@ -10,13 +10,15 @@
 
 #import "News+Tests.h"
 
+#import <CoreData/CoreData.h>
+
 
 
 @implementation News (Tests)
 
 + (News *)testNews
 {
-    News *news = [[News alloc] init];
+    News *news = [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
     news.title = @"One news";
     news.link = @"http://one.news.com";
     news.descriptionOfNews = @"Ordinary news";
@@ -28,7 +30,7 @@
 
 + (News *)anotherTestNews
 {
-    News *news = [[News alloc] init];
+    News *news = [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
     news.title = @"One more news";
     news.link = @"http://one.more.news.com";
     news.descriptionOfNews = @"Ordinary news. One more.";

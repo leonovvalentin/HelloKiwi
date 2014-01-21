@@ -131,7 +131,9 @@ describe(@"NewsVC", ^{
             
             it(@"should set right news in updateNews", ^{
                 
-                NSArray *news = @[[[News alloc] init]];
+                NSArray *news =
+                @[[News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]]];
+                
                 [APIHelperNews stub:@selector(newsFromSuccessResponse:) andReturn:news];
                 
                 [sut updateNews];

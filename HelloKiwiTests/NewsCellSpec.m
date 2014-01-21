@@ -43,7 +43,7 @@ describe(@"NewsCell", ^{
         
         beforeEach(^{
             
-            news = [[News alloc] init];
+            news = [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
             news.title = @"One news";
             news.link = @"http://one.news.com";
             news.descriptionOfNews = @"Ordinary news";

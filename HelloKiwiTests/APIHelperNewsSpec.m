@@ -79,7 +79,9 @@ describe(@"APIHelperNews", ^{
         
         it(@"should return news equals to news from newsFromSuccessResponse: in success block", ^{
             
-            NSArray *rightNews = @[[[News alloc] init]];
+            NSArray *rightNews =
+            @[[News MR_createInContext: [NSManagedObjectContext MR_contextForCurrentThread]]];
+            
             [[sut class] stub:@selector(newsFromSuccessResponse:) andReturn:rightNews];
             
             __block NSArray *newsFromResponse;

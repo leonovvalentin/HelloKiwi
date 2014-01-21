@@ -43,7 +43,10 @@
                                child:@"channel"];
     NSArray *elements = [channelXML children:@"item"];
     for (RXMLElement *element in elements) {
-        News *newsItem = [[News alloc] init];
+        
+        News *newsItem =
+        [News MR_createInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+        
         newsItem.title = [element child:@"title"].text;
         newsItem.link = [element child:@"link"].text;
         newsItem.descriptionOfNews = [element child:@"description"].text;
