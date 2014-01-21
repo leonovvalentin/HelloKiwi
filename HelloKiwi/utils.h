@@ -8,10 +8,6 @@
 
 
 
-NSString * applicationDocumentsDirectory();
-
-
-
 @interface NSDate (utils)
 
 + (NSDate *)dateFromString:(NSString *)dateString;

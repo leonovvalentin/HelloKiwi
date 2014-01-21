@@ -11,15 +11,16 @@
 		58293BC81881ADAA00A2AE10 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
 		5831D71718819CE000884D55 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D71618819CE000884D55 /* News.m */; };
 		5831D71A1881A60200884D55 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5831D7191881A60200884D55 /* utils.m */; };
+		58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */; };
+		58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4BC701881687100357E76 /* AppDelegateSpec.m */; };
 		C92CBC43C6514462979607BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8080074748094593914C6262 /* libPods.a */; };
 		EA21375318868E07007E0E77 /* ImagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21375218868E07007E0E77 /* ImagesVC.m */; };
+		EA21375718868FBB007E0E77 /* ImagesVCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21375618868FBB007E0E77 /* ImagesVCSpec.m */; };
 		EA260349188663E8006B4069 /* NSString+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260348188663E8006B4069 /* NSString+Tests.m */; };
-		EA593624188D13C50094B61C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA593622188D13C50094B61C /* Model.xcdatamodeld */; };
-		EA59362A188D1B1E0094B61C /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EA593629188D1B1E0094B61C /* Database.m */; };
-		EA59362C188D1B450094B61C /* DatabaseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59362B188D1B450094B61C /* DatabaseSpec.m */; };
 		EA8F12911885106500197770 /* News+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F12901885106500197770 /* News+Tests.m */; };
 		EA9431291884F162008B5752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9431281884F162008B5752 /* Localizable.strings */; };
 		EAA2C4E418850A9100267188 /* NewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2C4E318850A9100267188 /* NewsDetailVC.m */; };
+		EAA2C4E618850D1500267188 /* NewsDetailVCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2C4E518850D1500267188 /* NewsDetailVCSpec.m */; };
 		EAA4205E187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
 		EAA42060187FF84E00945233 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205F187FF84E00945233 /* CoreGraphics.framework */; };
 		EAA42062187FF84E00945233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42061187FF84E00945233 /* UIKit.framework */; };
@@ -31,13 +32,14 @@
 		EAA42078187FF84E00945233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA4205D187FF84E00945233 /* Foundation.framework */; };
 		EAA42079187FF84E00945233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA42061187FF84E00945233 /* UIKit.framework */; };
 		EAA42081187FF84E00945233 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAA4207F187FF84E00945233 /* InfoPlist.strings */; };
+		EAA42083187FF84E00945233 /* NewsVCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA42082187FF84E00945233 /* NewsVCSpec.m */; };
 		EAA4208E187FFBF800945233 /* NewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4208D187FFBF800945233 /* NewsVC.m */; };
 		EAA42090187FFD7E00945233 /* HelloKiwi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */; };
 		EAA42092188000C700945233 /* newsResponse.rss in Resources */ = {isa = PBXBuildFile; fileRef = EAA42091188000C700945233 /* newsResponse.rss */; };
 		EAA420951880027100945233 /* APIHelperNews.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA420941880027100945233 /* APIHelperNews.m */; };
 		EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */; };
 		EAB77E461883EF8E00EDCC3E /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB77E451883EF8E00EDCC3E /* NewsCell.m */; };
-		EACB3995188E2D990041B6C5 /* Database+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EACB3994188E2D990041B6C5 /* Database+Tests.m */; };
+		EADFC2A018840D020012CCB9 /* NewsCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EADFC29F18840D020012CCB9 /* NewsCellSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +68,6 @@
 		EA21375618868FBB007E0E77 /* ImagesVCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesVCSpec.m; sourceTree = "<group>"; };
 		EA260347188663E8006B4069 /* NSString+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tests.h"; sourceTree = "<group>"; };
 		EA260348188663E8006B4069 /* NSString+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tests.m"; sourceTree = "<group>"; };
-		EA593623188D13C50094B61C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		EA593628188D1B1E0094B61C /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
-		EA593629188D1B1E0094B61C /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
-		EA59362B188D1B450094B61C /* DatabaseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSpec.m; sourceTree = "<group>"; };
 		EA8F128F1885106500197770 /* News+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "News+Tests.h"; sourceTree = "<group>"; };
 		EA8F12901885106500197770 /* News+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "News+Tests.m"; sourceTree = "<group>"; };
 		EA9431281884F162008B5752 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -102,8 +100,6 @@
 		EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+Tests.m"; sourceTree = "<group>"; };
 		EAB77E441883EF8E00EDCC3E /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		EAB77E451883EF8E00EDCC3E /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
-		EACB3993188E2D990041B6C5 /* Database+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Database+Tests.h"; sourceTree = "<group>"; };
-		EACB3994188E2D990041B6C5 /* Database+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Database+Tests.m"; sourceTree = "<group>"; };
 		EADFC29F18840D020012CCB9 /* NewsCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,8 +154,6 @@
 			children = (
 				EAA420931880027100945233 /* APIHelperNews.h */,
 				EAA420941880027100945233 /* APIHelperNews.m */,
-				EA593628188D1B1E0094B61C /* Database.h */,
-				EA593629188D1B1E0094B61C /* Database.m */,
 				5831D71518819CE000884D55 /* News.h */,
 				5831D71618819CE000884D55 /* News.m */,
 				5831D7181881A60200884D55 /* utils.h */,
@@ -182,8 +176,6 @@
 			children = (
 				EAA736A71883C71B00FE16D8 /* OHHTTPStubs+Tests.h */,
 				EAA736A81883C71B00FE16D8 /* OHHTTPStubs+Tests.m */,
-				EACB3993188E2D990041B6C5 /* Database+Tests.h */,
-				EACB3994188E2D990041B6C5 /* Database+Tests.m */,
 				EA8F128F1885106500197770 /* News+Tests.h */,
 				EA8F12901885106500197770 /* News+Tests.m */,
 				EA260347188663E8006B4069 /* NSString+Tests.h */,
@@ -239,7 +231,6 @@
 				EAA4206F187FF84E00945233 /* Images.xcassets */,
 				EAA4208F187FFD7E00945233 /* HelloKiwi.storyboard */,
 				EA9431281884F162008B5752 /* Localizable.strings */,
-				EA593622188D13C50094B61C /* Model.xcdatamodeld */,
 			);
 			path = HelloKiwi;
 			sourceTree = "<group>";
@@ -263,7 +254,6 @@
 				EAA42082187FF84E00945233 /* NewsVCSpec.m */,
 				EADFC29F18840D020012CCB9 /* NewsCellSpec.m */,
 				58BAE77118815FE5002984DF /* APIHelperNewsSpec.m */,
-				EA59362B188D1B450094B61C /* DatabaseSpec.m */,
 				58C4BC701881687100357E76 /* AppDelegateSpec.m */,
 				EA4ADDDD1884193E000A698D /* Helpers */,
 				EAA4207D187FF84E00945233 /* Supporting Files */,
@@ -454,9 +444,7 @@
 				EAA4208E187FFBF800945233 /* NewsVC.m in Sources */,
 				EAB77E461883EF8E00EDCC3E /* NewsCell.m in Sources */,
 				5831D71A1881A60200884D55 /* utils.m in Sources */,
-				EA593624188D13C50094B61C /* Model.xcdatamodeld in Sources */,
 				EAA4206E187FF84E00945233 /* AppDelegate.m in Sources */,
-				EA59362A188D1B1E0094B61C /* Database.m in Sources */,
 				EAA4206A187FF84E00945233 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,10 +454,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA736A91883C71B00FE16D8 /* OHHTTPStubs+Tests.m in Sources */,
-				EACB3995188E2D990041B6C5 /* Database+Tests.m in Sources */,
 				EA260349188663E8006B4069 /* NSString+Tests.m in Sources */,
-				EA59362C188D1B450094B61C /* DatabaseSpec.m in Sources */,
+				58C4BC711881687100357E76 /* AppDelegateSpec.m in Sources */,
 				EA8F12911885106500197770 /* News+Tests.m in Sources */,
+				58BAE77218815FE5002984DF /* APIHelperNewsSpec.m in Sources */,
+				EAA2C4E618850D1500267188 /* NewsDetailVCSpec.m in Sources */,
+				EA21375718868FBB007E0E77 /* ImagesVCSpec.m in Sources */,
+				EAA42083187FF84E00945233 /* NewsVCSpec.m in Sources */,
+				EADFC2A018840D020012CCB9 /* NewsCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,19 +672,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EA593622188D13C50094B61C /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EA593623188D13C50094B61C /* Model.xcdatamodel */,
-			);
-			currentVersion = EA593623188D13C50094B61C /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EAA42052187FF84E00945233 /* Project object */;
 }
