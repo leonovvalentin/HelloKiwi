@@ -12,6 +12,14 @@
 
 
 
+NSString * applicationDocumentsDirectory()
+{
+    return
+    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+}
+
+
+
 @implementation NSDate (utils)
 
 + (NSDate *)dateFromString:(NSString *)dateString

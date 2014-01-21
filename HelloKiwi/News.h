@@ -2,18 +2,18 @@
 //  News.h
 //  HelloKiwi
 //
-//  Created by Valentin Leonov on 11/01/14.
+//  Created by Valentin Leonov on 20/01/14.
 //  Copyright (c) 2014 noveo. All rights reserved.
 //
 
 
 
-@interface News : NSObject
+@interface News : NSManagedObject
 
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *link;
-@property (strong, nonatomic) NSString *descriptionOfNews;
-@property (strong, nonatomic) NSDate *pubDate;
-@property (strong, nonatomic) NSString *guid;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * link;
+@property (nonatomic, retain) NSDate * pubDate;
+@property (nonatomic, retain) NSString * descriptionOfNews;
+@property (nonatomic, retain) NSString * guid;
 
 @end
