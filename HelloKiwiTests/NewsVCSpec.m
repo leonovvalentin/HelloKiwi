@@ -26,10 +26,10 @@ describe(@"NewsVC", ^{
     __block NewsVC *sut;
     
     beforeEach(^{
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
         sut = (NewsVC *)[[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
                          instantiateViewControllerWithIdentifier:@"NewsVC"];
         sut.APIHelper = [[APIHelperNews alloc] init];
-        [MagicalRecord setupCoreDataStackWithInMemoryStore];
     });
     
     afterEach(^{

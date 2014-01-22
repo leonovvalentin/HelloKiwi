@@ -23,6 +23,8 @@ describe(@"NewsCell", ^{
     
     beforeEach(^{
         
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
+        
         titleLabel = [[UILabel alloc] init];
         pubDateLabel = [[UILabel alloc] init];
         
@@ -35,6 +37,7 @@ describe(@"NewsCell", ^{
         sut = nil;
         titleLabel = nil;
         pubDateLabel = nil;
+        [MagicalRecord cleanUp];
     });
     
     context(@"after setupWithNews:", ^{

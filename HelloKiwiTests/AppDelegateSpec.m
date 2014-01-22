@@ -24,15 +24,20 @@ describe(@"AppDelegate", ^{
     __block UITabBarController *tabBarController;
     
     beforeEach(^{
+        
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
+        
         sut = [[AppDelegate alloc] init];
         sut.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         sut.window.rootViewController = [[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
                                          instantiateInitialViewController];
+        
         tabBarController = (UITabBarController *)sut.window.rootViewController;
     });
     
     afterEach(^{
         sut = nil;
+        [MagicalRecord cleanUp];
     });
     
     it(@"should setup MagicalRecord when application:didFinishLaunchingWithOptions:", ^{

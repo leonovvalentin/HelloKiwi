@@ -24,6 +24,7 @@ describe(@"NewsDetailVC", ^{
     __block NewsDetailVC *sut;
     
     beforeEach(^{
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
         sut = (NewsDetailVC *)[[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
                                instantiateViewControllerWithIdentifier:@"NewsDetailVC"];
         sut.news = [News testNews];
@@ -31,6 +32,7 @@ describe(@"NewsDetailVC", ^{
     
     afterEach(^{
         sut = nil;
+        [MagicalRecord cleanUp];
     });
     
     context(@"after view was loaded", ^{

@@ -24,8 +24,8 @@ describe(@"APIHelperNews", ^{
     __block APIHelperNews *sut;
     
     beforeEach(^{
-        sut = [[APIHelperNews alloc] init];
         [MagicalRecord setupCoreDataStackWithInMemoryStore];
+        sut = [[APIHelperNews alloc] init];
     });
     
     afterEach(^{

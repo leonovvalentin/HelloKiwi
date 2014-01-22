@@ -19,6 +19,7 @@ describe(@"ImageVC", ^{
     __block ImagesVC *sut;
     
     beforeEach(^{
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
         sut = [[UIStoryboard storyboardWithName:@"HelloKiwi" bundle:nil]
                instantiateViewControllerWithIdentifier:@"ImagesVC"];
         sut.viewControllers = @[[[UIViewController alloc] init],
@@ -28,6 +29,7 @@ describe(@"ImageVC", ^{
     
     afterEach(^{
         sut = nil;
+        [MagicalRecord cleanUp];
     });
     
     it(@"should have rigth title", ^{
